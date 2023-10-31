@@ -1,0 +1,4 @@
+<!-- App View - Main Entry Point -->
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.App" displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App busy="{= ${appView>/busy} || ${appView>/busyOnSearchComponent}}" busyIndicatorDelay="{appView>/delay}" id="customerApp"/>
+</mvc:View>

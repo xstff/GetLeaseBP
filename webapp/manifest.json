@@ -1,0 +1,265 @@
+{
+    "_version": "1.5.0",
+    "sap.app": {
+        "id": "fs.cb.bankcustomer.displays1",
+        "type": "application",
+        "resources": "resources.json",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "tags": {
+            "keywords": []
+        },
+        "applicationVersion": {
+            "version": "${project.version}"
+        },
+        "ach": "FS-XA",
+        "dataSources": {
+            "searchServiceV1": {
+                "uri": "/sap/opu/odata/sap/BUSINESSPARTNERSEARCH_SRV",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/searchServiceV1/metadata.xml",
+                    "annotations": [
+                        "BUSINESSPARTNERSEARCH_ANNOTATIONS"
+                    ]
+                }
+            },
+            "BUSINESSPARTNERSEARCH_ANNOTATIONS": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='BUSINESSPARTNERSEARCH_ANNO_MDL',Version='0001')/$value",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/searchServiceV1/BUSINESSPARTNERSEARCH_ANNO_MDL.xml"
+                }
+            },
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/BKCUSTOVW_SRV",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/ZBKCUSTOVW_SRV/metadata.xml"
+                }
+            }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "CustomerOverview": {
+                    "semanticObject": "BankCustomer",
+                    "action": "display",
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    }
+                }
+            },
+            "outbounds": {
+                "timeDepositDisplay": {
+                    "semanticObject": "TimeDeposit",
+                    "action": "display",
+                    "parameters": {
+                        "BkAcctInternalID": {}
+                    }
+                },
+                "savingsAccountManage": {
+                    "semanticObject": "SavingsAccount",
+                    "action": "manage",
+                    "parameters": {
+                        "BkAcctInternalID": {}
+                    }
+                }
+            }
+        },
+        "sourceTemplate": {
+            "id": "sap.ui.ui5-template-plugin.1worklist",
+            "version": "1.34.3",
+            "toolsId": "620756dc-245a-4e9b-8416-57e3f62e4d96"
+        }
+    },
+    "sap.fiori": {
+        "registrationIds": [
+            "F2126A"
+        ],
+        "archeType": "transactional"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "sap-icon://Fiori2/F9991",
+            "favIcon": "icon/F9991_Overview_Customer.ico",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize",
+            "sap_belize"
+        ],
+        "fullWidth": true
+    },
+    "sap.ui5": {
+        "config": {
+            "sapFiori2Adaptation": true
+        },
+        "componentName": "fs.cb.bankcustomer.displays1",
+        "autoPrefixId": true,
+        "dependencies": {
+            "minUI5Version": "${sap.ui5.dist.version}",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.ushell": {
+                    "lazy": false
+                },
+                "sap.m": {},
+                "sap.ui.comp": {
+                    "lazy": false
+                },
+                "sap.uxap": {
+                    "lazy": true
+                },
+                "sap.ui.layout": {
+                    "lazy": true
+                },
+                "sap.f": {
+                    "lazy": true
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "fs.cb.bankcustomer.displays1.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "settings": {
+                    "metadataUrlParams": {
+                        "sap-documentation": "heading",
+                        "sap-value-list": "none"
+                    },
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline"
+                },
+                "preload": false
+            },
+            "search": {
+                "dataSource": "searchServiceV1",
+                "settings": {
+                    "metadataUrlParams": {
+                        "sap-documentation": "heading,quickinfo",
+                        "sap-value-list": "none"
+                    },
+                    "defaultBindingMode": "TwoWay"
+                },
+                "preload": false
+            }
+        },
+        "rootView": {
+            "viewName": "fs.cb.bankcustomer.displays1.view.App",
+            "type": "XML",
+            "id": "customerApp"
+        },
+        "routing": {
+            "config": {
+                "async": false,
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "fs.cb.bankcustomer.displays1.view",
+                "controlId": "customerApp",
+                "controlAggregation": "pages",
+                "bypassed": {
+                    "target": [
+                        "mainPage",
+                        "notFound"
+                    ]
+                }
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "init_start",
+                    "target": [
+                        "mainPage",
+                        "start"
+                    ]
+                },
+                {
+                    "pattern": "Customer",
+                    "name": "start",
+                    "target": [
+                        "mainPage",
+                        "start"
+                    ]
+                },
+                {
+                    "pattern": "Customer(UUID={iCustomerUUID})",
+                    "name": "displayCustomer",
+                    "target": [
+                        "mainPage",
+                        "object_page"
+                    ]
+                },
+                {
+                    "pattern": "Customer(sap-iapp-state={iAppState}, UUID={iCustomerUUID})",
+                    "name": "displayCustomerWithAppState",
+                    "target": [
+                        "mainPage",
+                        "object_page"
+                    ]
+                }
+            ],
+            "targets": {
+                "mainPage": {
+                    "viewName": "MainPage"
+                },
+                "start": {
+                    "controlId": "ObjectPageContainer",
+                    "controlAggregation": "pages",
+                    "viewName": "StartPage",
+                    "parent": "mainPage"
+                },
+                "object_page": {
+                    "controlId": "ObjectPageContainer",
+                    "controlAggregation": "pages",
+                    "viewName": "Object",
+                    "parent": "mainPage"
+                },
+                "notFound": {
+                    "controlId": "ObjectPageContainer",
+                    "controlAggregation": "pages",
+                    "viewName": "ObjectNotFound",
+                    "parent": "mainPage"
+                },
+                "error": {
+                    "controlId": "ObjectPageContainer",
+                    "controlAggregation": "pages",
+                    "viewName": "ErrorPage",
+                    "parent": "mainPage"
+                }
+            }
+        },
+        "services": {
+            "ShellUIService": {
+                "lazy": false,
+                "factoryName": "sap.ushell.ui5service.ShellUIService",
+                "settings": {
+                    "setHierarchy": "auto",
+                    "setTitle": "auto"
+                }
+            }
+        }
+    }
+}

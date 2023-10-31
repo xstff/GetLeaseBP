@@ -1,0 +1,15 @@
+######################################################
+#                                                    # 
+#                                                    #
+# !! place this file as pipelineConfig.yml !!        #
+# !! in your repo's root folder            !!        #
+#                                                    #
+#  Make sure your yml file is syntactically correct  #
+#   http://www.yamllint.com/                         #
+#                                                    #
+#     maintain only the values you need !            #
+#                                                    #
+###################################################### 
+msTeams:
+  msTeamsWebhookURL: https://sap.webhook.office.com/webhookb2/31b3e6bf-8079-476b-aa31-8325bdb14395@42f7676c-f455-423c-82f6-dc2d99791af7/JenkinsCI/da72787f489b4f06a426425c1f723fe5/c4bc996e-a2a7-4988-9000-df725696e41a
+

@@ -1,0 +1,3 @@
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.NotFound" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<MessagePage description="" icon="{sap-icon://personnel-view}" id="errorPage" showHeader="false" text="{i18n>ymsg.objectNotFound}"></MessagePage>
+</mvc:View>

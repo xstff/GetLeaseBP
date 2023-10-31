@@ -1,0 +1,41 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="test.integration.crossapp.controller.TestPage"
+	xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true">
+	<App>
+		<pages>
+			<Page id="idTestPage" title="Test Page for Cross-App Navigation" class="sapUiFioriObjectPage">
+				<content>
+					<Panel id="idTestPanel1" headerText="Supported Start Parameters">
+						<content>
+							<l:VerticalLayout id="idTestLayout1" class="sapUiContentPadding" width="100%">
+								<l:content>
+									<Link id="link1" text="Navigate to app without parameters: #BankCustomer-display" press="navigateToAppWithoutParamaters"/>
+									<Link id="link2" text="Navigate to app using bp UUID: #BankCustomer-display?CustomerUUID=8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55"
+										press="navigateToAppUsingBPUUID"/>
+								</l:content>
+							</l:VerticalLayout>
+						</content>
+					</Panel>
+					<Panel id="idTestPanel2" headerText="Fallback: Not valid parameters">
+						<content>
+							<l:VerticalLayout id="idTestLayout2" class="sapUiContentPadding" width="100%">
+								<l:content>
+									<Link id="link4" text="Navigate to app with non valid internal id as cross-app parameter -> Not found page"
+										press="navigateToAppUsingWrongBPUUID"/>
+									<Link id="link5" text="Navigate to app with valid internal id but non valid sap-xapp-state key -> Search for account and display"
+										press="navigateToAppUsingWrongAppStateKey"/>
+									<Link id="link6"
+										text="Navigate to app with valid internal id and with sap-xapp-state content containing not all parameters -> Search for account and display"
+										press="navigateToAppUsingWrongAppStateContent"/>
+									<Link id="link7" text="Navigate to app with non valid sap-xapp-state key and not valid internal id -> Not found page"
+										press="navigateToAppUsingWrongInternalIdAndAppState"/>
+									<Link id="link8" text="Navigate to app with sap-xapp-state and without internal id -> Internal ID is mandatory, Start Page displayd"
+										press="navigateToAppUsingAppStateWithoutInternalId"/>
+								</l:content>
+							</l:VerticalLayout>
+						</content>
+					</Panel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

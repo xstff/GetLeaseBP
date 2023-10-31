@@ -1,0 +1,19 @@
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.blocks.BlockInfoController" xmlns:forms="sap.ui.layout.form"
+	xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<forms:SimpleForm id="formPostalAddress" editable="false" layout="ResponsiveGridLayout" title="{i18n>xtit.bpPostalAddress}">
+		<forms:toolbar id="formPostalAddressFormToolbar">
+			<Toolbar id="formPostalAddressToolbar" visible="false">
+				<Title id="formPostalAddressTitle" text="{i18n>xtit.bpPostalAddress}" visible="false"></Title>
+			</Toolbar>
+		</forms:toolbar>
+		<forms:content>
+			<core:Title text="{i18n>xtit.bpPostalAddress}"/>
+			<Label id="labStdAddr" text="{i18n>xfld.bpPostalAddrStdAddr}"
+				visible="{path: 'mainview>/StandardAddress/FormattedAddress', formatter:'.isPropertyFilled'}"/>
+			<Text id="stdAddrText"
+				text="{parts: [ {path:'mainview>/StandardAddress/FormattedAddress'}], formatter:'.formatter.replaceAddrSlashByNewLine'}"
+				tooltip="{mainview>/StandardAddress/Note}" visible="{path: 'mainview>/StandardAddress/FormattedAddress', formatter:'.isPropertyFilled'}"/>
+			<Text id="noPostalAddressText" text="{i18n>ymsg.NoPostalAddress}" visible="{mainview>/NoPostalAddress}"/>
+		</forms:content>
+	</forms:SimpleForm>
+</mvc:View>

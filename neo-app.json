@@ -1,0 +1,63 @@
+{
+	"routes": [{
+		"path": "/sap/opu/odata/sap/BKCUSTOVW_SRV/",
+		"target": {
+			"type": "destination",
+			"name": "FC1CLNT100",
+			"entryPath": "/sap/opu/odata/sap/BKCUSTOVW_SRV/"
+		},
+		"description": "FC1CLNT100"
+	}, {
+		"path": "/sap/opu/odata/sap/BUSINESSPARTNERSEARCH_SRV",
+		"target": {
+			"type": "destination",
+			"name": "FC1CLNT100",
+			"entryPath": "/sap/opu/odata/sap/BUSINESSPARTNERSEARCH_SRV"
+		},
+		"description": "OData in Backend System for Account Holder Party Search V1"
+	}, {
+		"path": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='BUSINESSPARTNERSEARCH_ANNO_MDL',Version='0001')/$value",
+		"target": {
+			"type": "destination",
+			"name": "FC1CLNT100",
+			"entryPath": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='BUSINESSPARTNERSEARCH_ANNO_MDL',Version='0001')/$value"
+		},
+		"description": "OData Annotations in Backend System for Account Holder Party Search V1"
+	}, {
+		"path": "/webapp/resources",
+		"target": {
+			"type": "application",
+			"name": "sapui5preview",
+			"version": "snapshot",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/webapp/test-resources",
+		"target": {
+			"type": "application",
+			"name": "sapui5preview",
+			"version": "snapshot",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}, {
+		"path": "/resources",
+		"target": {
+			"type": "application",
+			"name": "sapui5preview",
+			"version": "snapshot",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/test-resources",
+		"target": {
+			"type": "application",
+			"name": "sapui5preview",
+			"version": "snapshot",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}]
+}

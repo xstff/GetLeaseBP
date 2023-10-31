@@ -1,0 +1,26 @@
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.blocks.BlockInfoController" xmlns:forms="sap.ui.layout.form"
+	xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<forms:SimpleForm id="formContactDetails" editable="false" layout="ResponsiveGridLayout" title="{i18n>xtit.bpContactDetails}">
+		<forms:toolbar id="formPostalAddressFormToolbar">
+			<Toolbar id="formPostalAddressToolbar" visible="false">
+				<Title id="formPostalAddressTitle" text="{i18n>xtit.bpContactDetails}" visible="false"></Title>
+			</Toolbar>
+		</forms:toolbar>
+		<forms:content>
+			<core:Title text="{i18n>xtit.bpContactDetails}"/>
+			<Label id="contactDetailsLandlineLab" text="{i18n>xfld.bpContactDetailsLandline}"
+				visible="{path: 'FormattedLandlineNumber', formatter:'.isPropertyFilled'}"/>
+			<Link id="contactDetailsLandlineLink" ariaLabelledBy="contactDetailsLandlineLab" press="handleTelPress" text="{FormattedLandlineNumber}"
+				tooltip="{LandlineNote}" visible="{path: 'FormattedLandlineNumber', formatter:'.isPropertyFilled'}"/>
+			<Label id="contactDetailsCellPhoneLab" text="{i18n>xfld.bpContactDetailsCellPhone}"
+				visible="{path: 'FormattedCellPhoneNumber', formatter:'.isPropertyFilled'}"/>
+			<Link id="contactDetailsCellPhoneLink" ariaLabelledBy="contactDetailsCellPhoneLab" press="handleTelPress" text="{FormattedCellPhoneNumber}"
+				tooltip="{CellPhoneNote}" visible="{path: 'FormattedCellPhoneNumber', formatter:'.isPropertyFilled'}"/>
+			<Label id="contactDetailsEmailAddrLab" text="{i18n>xfld.bpContactDetailsEmailAddr}"
+				visible="{path: 'DefaultEmailURI', formatter:'.isPropertyFilled'}"/>
+			<Link id="contactDetailsEmailAddrLink" ariaLabelledBy="contactDetailsEmailAddrLab" press="handleEmailPress" text="{DefaultEmailURI}"
+				tooltip="{DefaultEmailNote}" visible="{path: 'DefaultEmailURI', formatter:'.isPropertyFilled'}"/>
+			<Text id="noContactDetails" text="{i18n>ymsg.NoContactDetails}" visible="{mainview>/NoContactDetails}"/>
+		</forms:content>
+	</forms:SimpleForm>
+</mvc:View>

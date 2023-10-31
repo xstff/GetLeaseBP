@@ -1,0 +1,34 @@
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.ObjectHeaderContent" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
+	xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.uxap">
+	<layout:VerticalLayout id="iconLayout" class="sapUiForceWidthAuto sapUiLargeMarginEnd sapUiTinyMarginBegin sapUiTinyMarginBottom">
+		<core:Icon id="iconObjectHeaderContent" alt="{FormattedName}" height="100%" size="4rem" src="sap-icon://personnel-view"/>
+	</layout:VerticalLayout>
+	<layout:VerticalLayout id="layoutObjHeaderContact" class="sapUiForceWidthAuto sapUiLargeMarginEnd sapUiTinyMarginBottom">
+		<m:Label id="labelName" text="{i18n>xfld.contact}"/>
+		<m:Link ariaLabelledBy="labelName" id="phone" press="handleTelPress"
+			visible="{path: 'DefaultPhoneFormattedNumber', formatter: '.isPropertyFilled'}" text="{DefaultPhoneFormattedNumber}"
+			tooltip="{DefaultPhoneNote}"/>
+		<m:Link ariaLabelledBy="labelName" id="email" press="handleEmailPress" visible="{path: 'DefaultEmailURI', formatter:'.isPropertyFilled'}"
+			text="{DefaultEmailURI}" tooltip="{DefaultEmailNote}"/>
+		<m:Text id="noContextText" text="{i18n>ymsg.NoPreferredContactData}" 
+				visible="{mainview>/NoPreferredContactData}" class="sapUiTinyMarginTop"/>
+	</layout:VerticalLayout>
+	<layout:VerticalLayout id="layoutObjHeaderSinceDate" class="sapUiForceWidthAuto sapUiLargeMarginEnd sapUiTinyMarginBottom">
+		<m:Label id="labelSinceDate" text="{i18n>xfld.since}" labelFor="sinceDate"/>
+		<m:Text id="sinceDate" class="sapUiTinyMarginTop"
+				text="{path: 'RelationshipStartDate', type: 'sap.ui.model.type.Date', formatter: '.getEitherValueOrFallback' }"/>
+	</layout:VerticalLayout>
+	<layout:VerticalLayout id="layoutObjHeaderRating" class="sapUiForceWidthAuto sapUiLargeMarginEnd sapUiTinyMarginBottom">
+		<m:Label id="labelRating" text="{i18n>xfld.rating}" labelFor="rating"/>
+		<m:ObjectStatus id="rating" class="sapUiTinyMarginTop"
+			state="{path: 'DefaultCreditRatingCode', formatter: '.formatter.getStateBasedOnRating'}"
+			text="{path:'DefaultCreditRatingName', formatter:'.getEitherValueOrFallback'}"/>
+	</layout:VerticalLayout>
+	<layout:VerticalLayout id="layoutObjHeaderAdvsrPty" class="sapUiForceWidthAuto sapUiLargeMarginEnd sapUiTinyMarginBottom">
+		<m:Label id="labelAdvsrPty" text="{i18n>xfld.advsrptyName}"/>
+		<m:Link id="advsrptyName" ariaLabelledBy="labelAdvsrPty" press="handleAdvsrPtyPress" class="sapUiTinyMarginTop"
+			visible="{path: 'AdvsrPty/FormattedName', formatter: '.isPropertyFilled'}" text="{AdvsrPty/FormattedName}"/>
+		<m:Text text="{i18n>ymsg.NoValueFallback}" id="noAdvisorText" class="sapUiTinyMarginTop"
+				visible="{path: 'AdvsrPty/FormattedName', formatter:'.isNotPropertyFilled'}"/>
+	</layout:VerticalLayout>
+</mvc:View>

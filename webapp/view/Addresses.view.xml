@@ -1,0 +1,45 @@
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.Addresses" width="auto" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Table busyIndicatorDelay="{addressTableView>/tableBusyDelay}" noDataText="{addressTableView>/tableNoDataText}" enableBusyIndicator="true"
+		id="addressTable" inset="false"
+		items="{ path : 'Addresses', filters: [ { path: 'AddrUsageCode', operator: 'NE', value1: 'XXDEFAULT' } ], sorter : { path : 'AddrUsageName', descending: false } }"
+		updateStarted="onUpdateStarted" updateFinished="onUpdateFinished" width="auto">
+		<headerToolbar id="addressHeaderToolbar">
+			<Toolbar id="addressToolbar" visible="false">
+				<Title id="addressTitle" text="{xtit.addressesSection}" visible="false"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<!-- 
+			<Column mergeDuplicates="true">
+-->
+			<Column id="colAddrTblAddrUsage" hAlign="Left" mergeDuplicates="false">
+				<Label id="labAddrTblAddrUsageCol" text="{i18n>xfld.addrUsage}" labelFor="addrUsageName"/>
+			</Column>
+			<Column id="colAddrTblAddress" demandPopin="true" minScreenWidth="XLarge" hAlign="Left">
+				<Label id="labAddrTblAddressCol" text="{i18n>xfld.addrAddress}" labelFor="addrAddress"/>
+			</Column>
+			<Column id="colAddrTblLandline" demandPopin="true" minScreenWidth="Large" hAlign="Left">
+				<Label id="labAddrTblLandlineCol" text="{i18n>xfld.addrLandline}" labelFor="addrLandline"/>
+			</Column>
+			<Column id="colAddrTblCellPhone" demandPopin="true" minScreenWidth="Large" hAlign="Left">
+				<Label id="labAddrTblCellPhoneCol" text="{i18n>xfld.addrCellPhone}" labelFor="addrCellPhone"/>
+			</Column>
+			<Column id="colAddrTblEmailAddress" demandPopin="true" minScreenWidth="Small" hAlign="Left">
+				<Label id="labAddrTblEmailAddressCol" text="{i18n>xfld.addrEmailAddress}" labelFor="addrEmail"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier id="addrUsageName" title="{AddrUsageName}" ariaLabelledBy="labAddrTblAddrUsageCol"/>
+					<Text id="addrAddress" text="{ path: 'FormattedAddress', formatter: '.formatter.replaceAddrSlashByComma' }"/>
+					<Link id="addrLandline" text="{FormattedLandlineNumber}" ariaLabelledBy="labAddrTblLandlineCol" tooltip="{LandlineNote}"
+						press="handleTelPress"/>
+					<Link id="addrCellPhone" text="{FormattedCellPhoneNumber}" ariaLabelledBy="labAddrTblCellPhoneCol" tooltip="{CellPhoneNote}"
+						press="handleTelPress"/>
+					<Link id="addrEmail" text="{EmailURI}" ariaLabelledBy="labAddrTblEmailAddressCol" tooltip="{EmailNote}" press="handleEmailPress"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>

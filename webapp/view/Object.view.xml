@@ -1,0 +1,44 @@
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.Object" 
+	xmlns:blocks="fs.cb.bankcustomer.displays1.view.blocks" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.uxap">
+	<ObjectPageLayout enableLazyLoading="true" id="ObjectPageLayout" upperCaseAnchorBar="false">
+		<headerTitle>
+            <core:Fragment fragmentName="fs.cb.bankcustomer.displays1.view.fragments.ObjectHeader" id="fragmentObjectHeaderTitle" type="XML"/>
+    	</headerTitle>
+		<headerContent>
+			<mvc:XMLView id="viewObjectHeaderContent" viewName="fs.cb.bankcustomer.displays1.view.ObjectHeaderContent"/>
+		</headerContent>
+		<sections>
+			<ObjectPageSection title="{i18n>xtit.infoSection}" titleUppercase="false">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<blocks:BlockCustomerDetails id="blockCustomerDetails"  columnLayout="1" />
+							<blocks:BlockPostalAddress id="blockPostalAddress"  columnLayout="1" />
+							<blocks:BlockContactDetails id="blockContactDetails"  columnLayout="1" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+<!--  visible="{mainview>/accountTableVisible}" -->			
+			<ObjectPageSection title="{i18n>xtit.accountsSection}" titleUppercase="false"> 
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<mvc:XMLView id="blockAccounts" viewName="fs.cb.bankcustomer.displays1.view.Accounts"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+<!--  visible="{mainview>/addressTableVisible}" -->			
+			<ObjectPageSection title="{i18n>xtit.addressesSection}" titleUppercase="false">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<mvc:XMLView id="blockAddresses" viewName="fs.cb.bankcustomer.displays1.view.Addresses"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>

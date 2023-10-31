@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:Reference
+		Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value"
+		xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+		<edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+	</edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="BUSINESSPARTNERSEARCH_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Fs_C_Bps_Accthldr_Search_V1Type" sap:label="Account Holder Search V1" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="UUID"/>
+				</Key>
+				<Property Name="InternalID" Type="Edm.String" Nullable="true" MaxLength="10" sap:display-format="UpperCase" sap:text="FormattedName"
+					sap:label="Account Holder ID"/>
+				<Property Name="GroupAddlName" Type="Edm.String" MaxLength="40" sap:label="Group Name 2"/>
+				<Property Name="KeyWordsText" Type="Edm.String" MaxLength="20" sap:label="Search Term 1"/>
+				<Property Name="AdditionalKeyWordsText" Type="Edm.String" MaxLength="20" sap:label="Search Term 2"/>
+				<Property Name="FormattedName" Type="Edm.String" MaxLength="80" sap:label="Name"/>
+				<Property Name="FormattedAddress" Type="Edm.String" MaxLength="80" sap:label="Address"/>
+				<Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Authorization Group"/>
+				<Property Name="UUID" Type="Edm.Guid" sap:label="Bank Customer UUID"/>
+				<Property Name="BusinessSystemID" Type="Edm.String" MaxLength="60" sap:label="Business System"/>
+				<Property Name="PersonFamilyName" Type="Edm.String" MaxLength="40" sap:label="Last Name"/>
+				<Property Name="PersonGivenName" Type="Edm.String" MaxLength="40" sap:label="First Name"/>
+				<Property Name="PersonBirthDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date of Birth"/>
+				<Property Name="OrganisationFirstLineName" Type="Edm.String" MaxLength="40" sap:label="Organization Name 1"/>
+				<Property Name="OrganizationSecondLineName" Type="Edm.String" MaxLength="40" sap:label="Organization Name 2"/>
+				<Property Name="GroupName" Type="Edm.String" MaxLength="40" sap:label="Group Name 1"/>
+				<NavigationProperty Name="to_BusinessPartnerValueHelp" Relationship="BUSINESSPARTNERSEARCH_SRV.assoc_C2EA6904FDDB0187641E07B24C421977"
+					FromRole="FromRole_assoc_C2EA6904FDDB0187641E07B24C421977" ToRole="ToRole_assoc_C2EA6904FDDB0187641E07B24C421977"/>
+			</EntityType>
+			<EntityType Name="Fs_C_Bps_Bp_Roles_VhType" sap:label="Value Help for PartyRoles" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="PartyRoleCode"/>
+				</Key>
+				<Property Name="PartyRoleCode" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Role Code"/>
+				<Property Name="PartyRoleName" Type="Edm.String" MaxLength="40" sap:label="Role Name"/>
+			</EntityType>
+			<EntityType Name="Fs_C_Bps_By_Partyrole_SearchType" sap:label="Business Partner by PartyRole Search" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="InternalID"/>
+					<PropertyRef Name="PartyRoleCode"/>
+				</Key>
+				<Property Name="InternalID" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="FormattedName"
+					sap:label="Partner ID"/>
+				<Property Name="PartyRoleCode" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Role Code"/>
+				<Property Name="PartyRoleName" Type="Edm.String" MaxLength="40" sap:label="Role Name"/>
+				<Property Name="UUID" Type="Edm.Guid" sap:label="Bank Customer UUID"/>
+				<Property Name="BusinessSystemID" Type="Edm.String" MaxLength="60" sap:label="Business System"/>
+				<Property Name="PersonFamilyName" Type="Edm.String" MaxLength="40" sap:label="Last Name"/>
+				<Property Name="PersonGivenName" Type="Edm.String" MaxLength="40" sap:label="First Name"/>
+				<Property Name="PersonBirthDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date of Birth"/>
+				<Property Name="OrganisationFirstLineName" Type="Edm.String" MaxLength="40" sap:label="Organization Name 1"/>
+				<Property Name="OrganizationSecondLineName" Type="Edm.String" MaxLength="40" sap:label="Organization Name 2"/>
+				<Property Name="GroupName" Type="Edm.String" MaxLength="40" sap:label="Group Name 1"/>
+				<Property Name="GroupAddlName" Type="Edm.String" MaxLength="40" sap:label="Group Name 2"/>
+				<Property Name="KeyWordsText" Type="Edm.String" MaxLength="20" sap:label="Search Term 1"/>
+				<Property Name="AdditionalKeyWordsText" Type="Edm.String" MaxLength="20" sap:label="Search Term 2"/>
+				<Property Name="FormattedName" Type="Edm.String" MaxLength="80" sap:label="Name"/>
+				<Property Name="FormattedAddress" Type="Edm.String" MaxLength="80" sap:label="Address"/>
+				<Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Authorization Group"/>
+				<Property Name="StreetName" Type="Edm.String" MaxLength="60" sap:label="Street"/>
+				<Property Name="HouseID" Type="Edm.String" MaxLength="10" sap:label="House Number"/>
+				<Property Name="PostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Postal Code"/>
+				<Property Name="CityName" Type="Edm.String" MaxLength="80" sap:label="City"/>
+				<Property Name="POBoxID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="PO Box"/>
+				<Property Name="POBoxPostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="PO Box Postal Code"/>
+				<Property Name="POBoxDeviatingCity" Type="Edm.String" MaxLength="80" sap:label="PO Box City"/>
+				<NavigationProperty Name="to_BusinessPartnerValueHelp" Relationship="BUSINESSPARTNERSEARCH_SRV.assoc_1D1E8AE2F34B8A9BB5F344840BC79B92"
+					FromRole="FromRole_assoc_1D1E8AE2F34B8A9BB5F344840BC79B92" ToRole="ToRole_assoc_1D1E8AE2F34B8A9BB5F344840BC79B92"/>
+			</EntityType>
+			<Association Name="assoc_C2EA6904FDDB0187641E07B24C421977" sap:content-version="1">
+				<End Type="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_Accthldr_Search_V1Type" Multiplicity="1"
+					Role="FromRole_assoc_C2EA6904FDDB0187641E07B24C421977"/>
+				<End Type="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_Accthldr_Search_V1Type" Multiplicity="1" Role="ToRole_assoc_C2EA6904FDDB0187641E07B24C421977"/>
+			</Association>
+			<Association Name="assoc_1D1E8AE2F34B8A9BB5F344840BC79B92" sap:content-version="1">
+				<End Type="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_By_Partyrole_SearchType" Multiplicity="1"
+					Role="FromRole_assoc_1D1E8AE2F34B8A9BB5F344840BC79B92"/>
+				<End Type="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_By_Partyrole_SearchType" Multiplicity="1" Role="ToRole_assoc_1D1E8AE2F34B8A9BB5F344840BC79B92"/>
+			</Association>
+			<EntityContainer Name="BUSINESSPARTNERSEARCH_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="Fs_C_Bps_Accthldr_Search_V1" EntityType="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_Accthldr_Search_V1Type" sap:updatable="false"
+					sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+				<EntitySet Name="Fs_C_Bps_Bp_Roles_Vh" EntityType="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_Bp_Roles_VhType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="Fs_C_Bps_By_Partyrole_Search" EntityType="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_By_Partyrole_SearchType" sap:updatable="false"
+					sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+				<AssociationSet Name="assoc_C2EA6904FDDB0187641E07B24C421977" Association="BUSINESSPARTNERSEARCH_SRV.assoc_C2EA6904FDDB0187641E07B24C421977"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="Fs_C_Bps_Accthldr_Search_V1" Role="FromRole_assoc_C2EA6904FDDB0187641E07B24C421977"/>
+					<End EntitySet="Fs_C_Bps_Accthldr_Search_V1" Role="ToRole_assoc_C2EA6904FDDB0187641E07B24C421977"/>
+				</AssociationSet>
+				<AssociationSet Name="assoc_1D1E8AE2F34B8A9BB5F344840BC79B92" Association="BUSINESSPARTNERSEARCH_SRV.assoc_1D1E8AE2F34B8A9BB5F344840BC79B92"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="Fs_C_Bps_By_Partyrole_Search" Role="FromRole_assoc_1D1E8AE2F34B8A9BB5F344840BC79B92"/>
+					<End EntitySet="Fs_C_Bps_By_Partyrole_Search" Role="ToRole_assoc_1D1E8AE2F34B8A9BB5F344840BC79B92"/>
+				</AssociationSet>
+			</EntityContainer>
+			<Annotations Target="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_Accthldr_Search_V1Type" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.SemanticKey">
+					<Collection>
+						<PropertyPath>InternalID</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_Bp_Roles_VhType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.SemanticKey">
+					<Collection>
+						<PropertyPath>PartyRoleCode</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_By_Partyrole_SearchType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.SemanticKey">
+					<Collection>
+						<PropertyPath>InternalID</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_By_Partyrole_SearchType/InternalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="Label" String="By PartyRole Search"/>
+						<PropertyValue Property="CollectionPath" String="Fs_C_Bps_By_Partyrole_Search"/>
+						<PropertyValue Property="CollectionRoot" String=""/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="InternalID"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="InternalID"/>
+								</Record>
+								<Record Type="Common.ValueListParameterOut">
+									<PropertyValue Property="ValueListProperty" String="FormattedName"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="FormattedAddress"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="PersonBirthDate"/>
+								</Record>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="PartyRoleName"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="PartyRoleName"/>
+								</Record>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="PartyRoleCode"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="PartyRoleCode"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="BUSINESSPARTNERSEARCH_SRV.Fs_C_Bps_Accthldr_Search_V1Type/InternalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="Label" String="By PartyRole Search"/>
+						<PropertyValue Property="CollectionPath" String="Fs_C_Bps_Accthldr_Search_V1"/>
+						<PropertyValue Property="CollectionRoot" String=""/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="InternalID"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="InternalID"/>
+								</Record>
+								<Record Type="Common.ValueListParameterOut">
+									<PropertyValue Property="ValueListProperty" String="FormattedName"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="FormattedAddress"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="PersonBirthDate"/>
+								</Record>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="PartyRoleName"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="PartyRoleName"/>
+								</Record>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="ValueListProperty" String="PartyRoleCode"/>
+									<PropertyValue Property="LocalDataProperty" PropertyPath="PartyRoleCode"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<atom:link rel="self" href="https://ldcif6d.wdf.sap.corp:44300/sap/opu/odata/SAP/BUSINESSPARTNERSEARCH_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/>
+			<atom:link rel="latest-version" href="https://ldcif6d.wdf.sap.corp:44300/sap/opu/odata/SAP/BUSINESSPARTNERSEARCH_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,10 @@
+<core:FragmentDefinition id="fragmentShareActionSheet" xmlns:core="sap.ui.core" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:semantic="sap.m.semantic" xmlns="sap.m">
+	<ActionSheet id="actionSheet" placement="Bottom" showCancelButton="true" title="{i18n>xtit.shareAction}">
+		<buttons>
+			<Button icon="sap-icon://email" id="buttonEmail" press="onShareEmailPress" text="{i18n>xbut.sendMail}"/>
+			<Button icon="sap-icon://share-2" id="buttonShareInJam" press="onShareInJamPress" text="{i18n>xbut.shareJam}"
+				visible="{FLP>/isShareInJamActive}"/>
+			<footerbar:AddBookmarkButton id="buttonBookmark" text="{i18n>xbut.save_tile}" title="{mainview>/saveAsTileTitle}"/>
+		</buttons>
+	</ActionSheet>
+</core:FragmentDefinition>

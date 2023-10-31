@@ -1,0 +1,64 @@
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.blocks.BlockInfoController" xmlns:forms="sap.ui.layout.form" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<forms:SimpleForm id="formPerson" editable="false" layout="ResponsiveGridLayout" visible="{mainview>/personVisible}"
+		title="{i18n>xtit.bpPerson}">
+		<forms:toolbar id="formPersonFormToolbar">
+			<Toolbar id="formPersonToolbar" visible="false">
+				<Title id="formPersonTitle" text="{i18n>xtit.bpPerson}" visible="false"></Title>
+			</Toolbar>
+		</forms:toolbar>
+		<forms:content>
+			<!--Personal form container-->
+			<core:Title text="{i18n>xtit.bpPerson}"/>
+			<Label id="labPersonFirstName" text="{i18n>xfld.bpPersonGivenName}" labelFor="personFirstName"
+				visible="{path:'Person/GivenName', formatter:'.isPropertyFilled'}"/>
+			<Text id="personFirstName" text="{Person/GivenName}" visible="{path:'Person/GivenName', formatter:'.isPropertyFilled'}"/>
+			<Label id="labPersonMiddleName" text="{i18n>xfld.bpPersonMiddleName}" labelFor="personMiddleName"
+				visible="{path:'Person/MiddleName', formatter:'.isPropertyFilled'}"/>
+			<Text id="personMiddleName" text="{Person/MiddleName}" visible="{path:'Person/MiddleName', formatter:'.isPropertyFilled'}"/>
+			<Label id="labPersonLastName" text="{i18n>xfld.bpPersonFamilyName}" labelFor="personLastName"
+				visible="{path:'Person/FamilyName', formatter:'.isPropertyFilled'}"/>
+			<Text id="personLastName" text="{Person/FamilyName}" visible="{path:'Person/FamilyName', formatter:'.isPropertyFilled'}"/>
+			<Label id="labPersonBirthName" text="{i18n>xfld.bpPersonBirthName}" labelFor="personBirthName"
+				visible="{path:'Person/BirthName', formatter:'.isPropertyFilled'}"/>
+			<Text id="personBirthName" text="{Person/BirthName}" visible="{path:'Person/BirthName', formatter:'.isPropertyFilled'}"/>
+			<Label id="labPersonBirthday" text="{i18n>xfld.bpPersonBirthDate}" labelFor="personBirthday"
+				visible="{path:'Person/BirthDate', formatter:'.isPropertyFilled'}"/>
+			<Text id="personBirthday" text="{path: 'Person/BirthDate', type: 'sap.ui.model.type.Date'}"
+				visible="{path:'Person/BirthDate', formatter:'.isPropertyFilled'}"/>
+			<!--			
+		<Label id="personBornplace" text="{i18n>xfld.bpPersonBirthPlace}"/>
+		<Text text="{Person/BirthPlaceName}"/>	
+-->
+		</forms:content>
+	</forms:SimpleForm>
+	<forms:SimpleForm id="formOrg" editable="false" layout="ResponsiveGridLayout" visible="{mainview>/organisationVisible}"
+		title="{i18n>xtit.bpOrganisation}">
+		<forms:toolbar id="formOrgFormToolbar">
+			<Toolbar id="formOrgToolbar" visible="false">
+				<Title id="formOrgTitle" text="{i18n>xtit.bpOrganisation}" visible="false"></Title>
+			</Toolbar>
+		</forms:toolbar>
+		<forms:content>
+			<!--Organisation form container-->
+			<core:Title text="{i18n>xtit.bpOrganisation}"/>
+			<Label id="labOrgName" text="{i18n>xfld.bpOrganisationName}" labelFor="orgName"/>
+			<Text id="orgName"
+				text="{parts: [ 'Organisation/FirstLineName', 'Organisation/SecondLineName', 'Organisation/ThirdLineName', 'Organisation/FourthLineName' ], formatter: '.formatter.appendLines' }"/>
+		</forms:content>
+	</forms:SimpleForm>
+	<forms:SimpleForm id="formGroup" editable="false" layout="ResponsiveGridLayout" visible="{mainview>/groupVisible}"
+		title="{i18n>xfld.bpGroupName}">
+		<forms:toolbar id="formGroupFormToolbar">
+			<Toolbar id="formGroupToolbar" visible="false">
+				<Title id="formGroupTitle" text="{i18n>xtit.bpGroup}" visible="false"></Title>
+			</Toolbar>
+		</forms:toolbar>
+		<forms:content>
+			<!--Group form container-->
+			<core:Title text="{i18n>xtit.bpGroup}"/>
+			<Label id="labGrpName" text="{i18n>xfld.bpGroupName}" labelFor="grpName"/>
+			<Text id="grpName" text="{parts: [ 'Group/Name', 'Group/AddlName' ], formatter: '.formatter.appendLines' }"/>
+		</forms:content>
+	</forms:SimpleForm>
+</mvc:View>

@@ -1,0 +1,8 @@
+<!-- Contains Serach Panel Definition -->
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.Search" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:smartfield="sap.ui.comp.smartfield" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<smartfield:SmartField entitySet="Fs_C_Bps_Accthldr_Search_V1" id="searchField" width="10em"
+		clientSideMandatoryCheck="false" initialise="onSmartFieldInitialise" value="{InternalID}" innerControlsCreated="onInnerControlsCreated"
+		data:dateFormatSettings='\{"UTC":true\}' change= "onChange" tooltip="{i18n>xtol.searchBar}"/>
+</mvc:View>

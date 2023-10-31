@@ -1,0 +1,89 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+ <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+ </edmx:Reference>
+ <edmx:DataServices m:DataServiceVersion="2.0">
+  <Schema Namespace="FS_C_BPS_ACCT_HLDR_SEARCH_SRV" xml:lang="de" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+   <EntityType Name="Fs_C_Bps_Account_Holder_SearchType" sap:label="Kontoinhabersuche" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="InternalID"/>
+    </Key>
+    <Property Name="InternalID" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="FormattedName" sap:label="Bankkunden-ID"/>
+    <Property Name="AddlName" Type="Edm.String" MaxLength="40" sap:label="Gruppenname 2"/>
+    <Property Name="KeyWordsText" Type="Edm.String" MaxLength="20" sap:label="Suchbegriff 1"/>
+    <Property Name="AdditionalKeyWordsText" Type="Edm.String" MaxLength="20" sap:label="Suchbegriff 2"/>
+    <Property Name="FormattedName" Type="Edm.String" MaxLength="80" sap:label="Name"/>
+    <Property Name="FormattedAddress" Type="Edm.String" MaxLength="80" sap:label="Anschrift"/>
+    <Property Name="StreetName" Type="Edm.String" MaxLength="60" sap:label="Straße"/>
+    <Property Name="HouseID" Type="Edm.String" MaxLength="10" sap:label="Hausnummer"/>
+    <Property Name="PostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Postleitzahl"/>
+    <Property Name="CityName" Type="Edm.String" MaxLength="80" sap:label="Ort"/>
+    <Property Name="POBoxID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Postfach"/>
+    <Property Name="UUID" Type="Edm.Guid" sap:label="Bankkunden-UUID"/>
+    <Property Name="POBoxPostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="PLZ des Postfachs"/>
+    <Property Name="POBoxDeviatingCity" Type="Edm.String" MaxLength="80" sap:label="Ort des Postfachs"/>
+    <Property Name="PartnerRoleType" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="GP-Rolle"/>
+    <Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Berechtigungsgruppe"/>
+    <Property Name="CentralBlock" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Zentrale Sperre"/>
+    <Property Name="BusinessPurposeCompleted" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Ende Verwendungszw."/>
+    <Property Name="NotReleased" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Nicht freigegeben"/>
+    <Property Name="GroupFeature" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Gruppierungsmerkmal"/>
+    <Property Name="BusinessSystemID" Type="Edm.String" MaxLength="60" sap:label="Business System"/>
+    <Property Name="FamilyName" Type="Edm.String" MaxLength="40" sap:label="Nachname"/>
+    <Property Name="GivenName" Type="Edm.String" MaxLength="40" sap:label="Vorname"/>
+    <Property Name="BirthDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Geburtsdatum"/>
+    <Property Name="FirstLineName" Type="Edm.String" MaxLength="40" sap:label="Organisationsname 1"/>
+    <Property Name="SecondLineName" Type="Edm.String" MaxLength="40" sap:label="Organisationsname 2"/>
+    <Property Name="Name" Type="Edm.String" MaxLength="40" sap:label="Gruppenname 1"/>
+    <NavigationProperty Name="to_BusinessPartnerValueHelp" Relationship="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.assoc_2F428DD830F0A283E3FF66334D4FFCF6" FromRole="FromRole_assoc_2F428DD830F0A283E3FF66334D4FFCF6" ToRole="ToRole_assoc_2F428DD830F0A283E3FF66334D4FFCF6"/>
+   </EntityType>
+   <Association Name="assoc_2F428DD830F0A283E3FF66334D4FFCF6" sap:content-version="1">
+    <End Type="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType" Multiplicity="1" Role="FromRole_assoc_2F428DD830F0A283E3FF66334D4FFCF6"/>
+    <End Type="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType" Multiplicity="1" Role="ToRole_assoc_2F428DD830F0A283E3FF66334D4FFCF6"/>
+   </Association>
+   <EntityContainer Name="FS_C_BPS_ACCT_HLDR_SEARCH_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+    <EntitySet Name="Fs_C_Bps_Account_Holder_Search" EntityType="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+    <AssociationSet Name="assoc_2F428DD830F0A283E3FF66334D4FFCF6" Association="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.assoc_2F428DD830F0A283E3FF66334D4FFCF6" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="Fs_C_Bps_Account_Holder_Search" Role="FromRole_assoc_2F428DD830F0A283E3FF66334D4FFCF6"/>
+     <End EntitySet="Fs_C_Bps_Account_Holder_Search" Role="ToRole_assoc_2F428DD830F0A283E3FF66334D4FFCF6"/>
+    </AssociationSet>
+   </EntityContainer>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <Annotation Term="Common.SemanticKey">
+     <Collection>
+      <PropertyPath>InternalID</PropertyPath>
+     </Collection>
+    </Annotation>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/InternalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <Annotation Term="Common.ValueList">
+     <Record Type="Common.ValueListType">
+      <PropertyValue Property="Label" String="Bank Customer Search"/>
+      <PropertyValue Property="CollectionPath" String="Fs_C_Bps_Account_Holder_Search"/>
+      <PropertyValue Property="CollectionRoot" String=""/>
+      <PropertyValue Property="SearchSupported" Bool="true"/>
+      <PropertyValue Property="Parameters">
+       <Collection>
+        <Record Type="Common.ValueListParameterInOut">
+         <PropertyValue Property="ValueListProperty" String="InternalID"/>
+         <PropertyValue Property="LocalDataProperty" PropertyPath="InternalID"/>
+        </Record>
+        <Record Type="Common.ValueListParameterOut">
+         <PropertyValue Property="ValueListProperty" String="FormattedName"/>
+        </Record>
+        <Record Type="Common.ValueListParameterDisplayOnly">
+         <PropertyValue Property="ValueListProperty" String="FormattedAddress"/>
+        </Record>
+        <Record Type="Common.ValueListParameterDisplayOnly">
+         <PropertyValue Property="ValueListProperty" String="BirthDate"/>
+        </Record>
+       </Collection>
+      </PropertyValue>
+     </Record>
+    </Annotation>
+   </Annotations>
+   <atom:link rel="self" href="https://ldcif6d.wdf.sap.corp:44300/sap/opu/odata/SAP/FS_C_BPS_ACCT_HLDR_SEARCH_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+   <atom:link rel="latest-version" href="https://ldcif6d.wdf.sap.corp:44300/sap/opu/odata/SAP/FS_C_BPS_ACCT_HLDR_SEARCH_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+  </Schema>
+ </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,51 @@
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.Accounts" width="auto" xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Table busyIndicatorDelay="{accountTableView>/tableBusyDelay}" enableBusyIndicator="true" 
+		id="accountTable" inset="false" items="{BkAcctContrs}"
+		noDataText="{accountTableView>/tableNoDataText}" 
+		updateFinished="onUpdateFinished" width="auto">
+		<headerToolbar id="accountHeaderToolbar">
+			<Toolbar id="accountToolbar" visible="false">
+				<Title id="accountTitle" text="{xtit.accountsSection}" visible="false"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column id="columnAccount">
+				<Label id="labelAccount" text="{i18n>xfld.accountNumber}" labelFor="acctID" />
+			</Column>
+			<Column demandPopin="true" id="columnProductID" minScreenWidth="Large">
+				<Label id="labelProductID" text="{i18n>xfld.accountProductID}" labelFor="acctProdID" />
+			</Column>
+			<Column demandPopin="true" id="columnProductName" minScreenWidth="Large">
+				<Label id="labelProductName" text="{i18n>xfld.accountProductName}" labelFor="acctProdName" />
+			</Column>
+			<Column demandPopin="true" id="columnStatus" minScreenWidth="Large" hAlign="Center">
+				<Label id="labelStatus" text="{i18n>xfld.accountStatus}" labelFor="acctStatusName" />
+			</Column>
+			<Column demandPopin="true" hAlign="End" id="columnLimit" minScreenWidth="Small">
+				<Label id="labelLimit" text="{i18n>xfld.accountLimit}" labelFor="acctLimit" />
+			</Column>
+			<Column demandPopin="true" hAlign="End" id="columnBalance" minScreenWidth="Small">
+				<Label id="labelBalance" text="{i18n>xfld.accountBalance}"  labelFor="acctBalance" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem press="onPress" type="Navigation">
+				<cells>
+					<ObjectIdentifier id="acctID" title="{BkAcctIdfgElmnts/ID}" ariaLabelledBy="labelAccount"/>
+					<Text id="acctProdID" text="{ProductionControlID}" />
+					<Text id="acctProdName" text="{ProductionControlDescription}"/>
+					<Text id="acctStatusName" text="{StatusName}"/>
+					<ObjectNumber id="acctLimit" emphasized="false" visible="{path: 'LimitAmount/CurrencyCode', formatter: '.isPropertyFilled'}"
+						number="{ parts: [{path: 'LimitAmount/Content'}, {path: 'LimitAmount/CurrencyCode'}], 
+											type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false, preserveDecimals: false } }"
+						unit="{LimitAmount/CurrencyCode}" />
+					<ObjectNumber id="acctBalance" emphasized="false" visible="{path: 'AcctBalAmount/CurrencyCode', formatter: '.isPropertyFilled'}"
+						number="{ parts: [{path: 'AcctBalAmount/Content'}, {path: 'AcctBalAmount/CurrencyCode'}], 
+									type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false, preserveDecimals: false } }"
+						unit="{AcctBalAmount/CurrencyCode}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>

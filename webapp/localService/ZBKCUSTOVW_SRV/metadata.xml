@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+ <edmx:DataServices m:DataServiceVersion="2.0">
+  <Schema Namespace="BKCUSTOVW_SRV" xml:lang="en" sap:schema-version="1" sap:extending-service-id="ZRSC_BKCUST_SRV.0001" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+   <EntityType Name="BkAcctContr" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="BusinessSystemID"/>
+     <PropertyRef Name="ID"/>
+     <PropertyRef Name="IDSchemeID"/>
+     <PropertyRef Name="IDSchemeAgencyID"/>
+     <PropertyRef Name="BkCustUUID"/>
+     <PropertyRef Name="BkCustBusiSysID"/>
+    </Key>
+    <Property Name="AcctBalAmount" Type="BKCUSTOVW_SRV.Amount" Nullable="false"/>
+    <Property Name="LimitAmount" Type="BKCUSTOVW_SRV.Amount" Nullable="false"/>
+    <Property Name="BkAcctIdfgElmnts" Type="BKCUSTOVW_SRV.BkAcctIdfgElmnts" Nullable="false"/>
+    <Property Name="BusinessSystemID" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Data Element for BusinessSystemID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Content Field for BankAccountContractID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="IDSchemeID" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Scheme ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="IDSchemeAgencyID" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Sch. Agency ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkCustUUID" Type="Edm.Guid" Nullable="false" sap:label="Content Field for UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkCustBusiSysID" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Data Element for BusinessSystemID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="TypeCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Content Field for BankAccountContractTypeCode" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+    <Property Name="TypeName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Content Field for MEDIUM_Name" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+    <Property Name="ProductionControlID" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Content Field for BankAccountContractProductionControlID" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+    <Property Name="ProductionControlDescription" Type="Edm.String" MaxLength="80" sap:label="Content Field for MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+    <Property Name="BankSalesProductID" Type="Edm.String" MaxLength="60" sap:label="Content Field for ProductID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="StatusCode" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="OData:  Contract Status UI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="StatusName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Content Field for MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="NavSemanticObj" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="NavAction" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="AdvsrPty" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="UUID"/>
+     <PropertyRef Name="BkCustUUID"/>
+     <PropertyRef Name="BkCustBusiSysID"/>
+    </Key>
+    <Property Name="UUID" Type="Edm.Guid" Nullable="false" sap:label="Content Field for UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="InternalID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Data Element for BusinessPartnerInternalID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkCustUUID" Type="Edm.Guid" Nullable="false" sap:label="Content Field for UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkCustBusiSysID" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Data Element for BusinessSystemID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="FormattedName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_LONG_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultPhoneFormattedNumber" Type="Edm.String" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultEmailURI" Type="Edm.String" sap:label="Content Field for EmailURI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="Address" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="UUID"/>
+     <PropertyRef Name="BkCustUUID"/>
+     <PropertyRef Name="BkCustBusiSysID"/>
+     <PropertyRef Name="AddrUsageCode"/>
+    </Key>
+    <Property Name="UUID" Type="Edm.Guid" Nullable="false" sap:label="Content Field for UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkCustUUID" Type="Edm.Guid" Nullable="false" sap:label="Content Field for UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkCustBusiSysID" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Data Element for BusinessSystemID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultIndicator" Type="Edm.Boolean" Nullable="false" sap:label="Data Element for Indicator" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+    <Property Name="AddrUsageName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+    <Property Name="AddrUsageCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Content Field for AddressUsageCode" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+    <Property Name="FormattedAddress" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="Note" Type="Edm.String" sap:label="Content Field for Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="EmailURI" Type="Edm.String" sap:label="Content Field for EmailURI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="EmailNote" Type="Edm.String" sap:label="Content Field for Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="FormattedLandlineNumber" Type="Edm.String" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="LandlineNote" Type="Edm.String" sap:label="Content Field for Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="FormattedCellPhoneNumber" Type="Edm.String" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="CellPhoneNote" Type="Edm.String" sap:label="Content Field for Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </EntityType>
+   <EntityType Name="BkCustomer" sap:content-version="1">
+    <Key>
+     <PropertyRef Name="UUID"/>
+     <PropertyRef Name="BusinessSystemID"/>
+    </Key>
+    <Property Name="Person" Type="BKCUSTOVW_SRV.Person" Nullable="false"/>
+    <Property Name="Organisation" Type="BKCUSTOVW_SRV.Organisation" Nullable="false"/>
+    <Property Name="Group" Type="BKCUSTOVW_SRV.Group" Nullable="false"/>
+    <Property Name="UUID" Type="Edm.Guid" Nullable="false" sap:label="Content Field for UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BusinessSystemID" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Data Element for BusinessSystemID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="InternalID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Data Element for BusinessPartnerInternalID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="CategoryCode" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Data Element for BusinessPartnerCategoryCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="CategoryName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_LONG_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="FormattedName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_LONG_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultEmailURI" Type="Edm.String" sap:label="Content Field for EmailURI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultEmailNote" Type="Edm.String" sap:label="Content Field for Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="FormattedLandlineNumber" Type="Edm.String" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="LandlineNote" Type="Edm.String" sap:label="Content Field for Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="FormattedCellPhoneNumber" Type="Edm.String" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="CellPhoneNote" Type="Edm.String" sap:label="Content Field for Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultPhoneFormattedNumber" Type="Edm.String" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultPhoneNote" Type="Edm.String" sap:label="Content Field for Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultCreditiRatingCode" Type="Edm.String" MaxLength="10" sap:label="Content Field for CreditRatingCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="DefaultCreditRatingName" Type="Edm.String" MaxLength="80" sap:label="Data Element for LANGUAGEINDEPENDENT_LONG_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="RelationshipStartDate" Type="Edm.DateTime" Precision="0" sap:label="Data Element for Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <NavigationProperty Name="BkAcctContrs" Relationship="BKCUSTOVW_SRV.BkCustomer_BkAcctContrs" FromRole="FromRole_BkCustomer_BkAcctContrs" ToRole="ToRole_BkCustomer_BkAcctContrs"/>
+    <NavigationProperty Name="AdvsrPty" Relationship="BKCUSTOVW_SRV.BkCustomer_AdvsrPty" FromRole="FromRole_BkCustomer_AdvsrPty" ToRole="ToRole_BkCustomer_AdvsrPty"/>
+    <NavigationProperty Name="Addresses" Relationship="BKCUSTOVW_SRV.BkCustomer_Addresses" FromRole="FromRole_BkCustomer_Addresses" ToRole="ToRole_BkCustomer_Addresses"/>
+   </EntityType>
+   <ComplexType Name="BkAcctIdfgElmnts">
+    <Property Name="ID" Type="Edm.String" MaxLength="35" sap:label="OData BankAccountID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="StandardID" Type="Edm.String" MaxLength="34" sap:label="Data Element for BankAccountStandardID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="CurrencyCode" Type="Edm.String" MaxLength="3" sap:label="OData CurrencyCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkStandardID" Type="Edm.String" MaxLength="11" sap:label="OData BankStandardID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkRoutingID" Type="Edm.String" MaxLength="35" sap:label="OData BankRoutingID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BkCountryCode" Type="Edm.String" MaxLength="3" sap:label="Data Element for CountryCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="IntID" Type="Edm.String" MaxLength="32" sap:label="Data Element for IntID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </ComplexType>
+   <ComplexType Name="Amount">
+    <Property Name="Content" Type="Edm.Decimal" Precision="23" Scale="2" sap:label="OData Amount.Content" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="CurrencyCode" Type="Edm.String" MaxLength="5" sap:label="OData CurrencyCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </ComplexType>
+   <ComplexType Name="Person">
+    <Property Name="FamilyName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GivenName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="MiddleName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BirthDate" Type="Edm.DateTime" Precision="0" sap:label="Data Element for Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BirthPlaceName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="BirthName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GenderCode" Type="Edm.String" MaxLength="1" sap:label="Data Element for GenderCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="GenderName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+   </ComplexType>
+   <ComplexType Name="Organisation">
+    <Property Name="FirstLineName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="SecondLineName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="ThirdLineName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="FourthLineName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+   </ComplexType>
+   <ComplexType Name="Group">
+    <Property Name="Name" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+    <Property Name="AddlName" Type="Edm.String" MaxLength="40" sap:label="Data Element for LANGUAGEINDEPENDENT_MEDIUM_Name" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+   </ComplexType>
+   <Association Name="BkCustomer_BkAcctContrs" sap:content-version="1">
+    <End Type="BKCUSTOVW_SRV.BkCustomer" Multiplicity="1" Role="FromRole_BkCustomer_BkAcctContrs"/>
+    <End Type="BKCUSTOVW_SRV.BkAcctContr" Multiplicity="*" Role="ToRole_BkCustomer_BkAcctContrs"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_BkCustomer_BkAcctContrs">
+      <PropertyRef Name="UUID"/>
+      <PropertyRef Name="BusinessSystemID"/>
+     </Principal>
+     <Dependent Role="ToRole_BkCustomer_BkAcctContrs">
+      <PropertyRef Name="BkCustUUID"/>
+      <PropertyRef Name="BkCustBusiSysID"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <Association Name="BkCustomer_AdvsrPty" sap:content-version="1">
+    <End Type="BKCUSTOVW_SRV.BkCustomer" Multiplicity="*" Role="FromRole_BkCustomer_AdvsrPty"/>
+    <End Type="BKCUSTOVW_SRV.AdvsrPty" Multiplicity="0..1" Role="ToRole_BkCustomer_AdvsrPty"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_BkCustomer_AdvsrPty">
+      <PropertyRef Name="UUID"/>
+      <PropertyRef Name="BusinessSystemID"/>
+     </Principal>
+     <Dependent Role="ToRole_BkCustomer_AdvsrPty">
+      <PropertyRef Name="BkCustUUID"/>
+      <PropertyRef Name="BkCustBusiSysID"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <Association Name="BkCustomer_Addresses" sap:content-version="1">
+    <End Type="BKCUSTOVW_SRV.BkCustomer" Multiplicity="1" Role="FromRole_BkCustomer_Addresses"/>
+    <End Type="BKCUSTOVW_SRV.Address" Multiplicity="*" Role="ToRole_BkCustomer_Addresses"/>
+    <ReferentialConstraint>
+     <Principal Role="FromRole_BkCustomer_Addresses">
+      <PropertyRef Name="UUID"/>
+      <PropertyRef Name="BusinessSystemID"/>
+     </Principal>
+     <Dependent Role="ToRole_BkCustomer_Addresses">
+      <PropertyRef Name="BkCustUUID"/>
+      <PropertyRef Name="BkCustBusiSysID"/>
+     </Dependent>
+    </ReferentialConstraint>
+   </Association>
+   <EntityContainer Name="BKCUSTOVW_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+    <EntitySet Name="BkAcctContrSet" EntityType="BKCUSTOVW_SRV.BkAcctContr" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="AdvsrPtySet" EntityType="BKCUSTOVW_SRV.AdvsrPty" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="AddressSet" EntityType="BKCUSTOVW_SRV.Address" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <EntitySet Name="BkCustomerSet" EntityType="BKCUSTOVW_SRV.BkCustomer" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+    <AssociationSet Name="BkCustomer_AddressesSet" Association="BKCUSTOVW_SRV.BkCustomer_Addresses" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="BkCustomerSet" Role="FromRole_BkCustomer_Addresses"/>
+     <End EntitySet="AddressSet" Role="ToRole_BkCustomer_Addresses"/>
+    </AssociationSet>
+    <AssociationSet Name="BkCustomer_AdvsrPtySet" Association="BKCUSTOVW_SRV.BkCustomer_AdvsrPty" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="BkCustomerSet" Role="FromRole_BkCustomer_AdvsrPty"/>
+     <End EntitySet="AdvsrPtySet" Role="ToRole_BkCustomer_AdvsrPty"/>
+    </AssociationSet>
+    <AssociationSet Name="BkCustomer_BkAcctContrsSet" Association="BKCUSTOVW_SRV.BkCustomer_BkAcctContrs" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+     <End EntitySet="BkCustomerSet" Role="FromRole_BkCustomer_BkAcctContrs"/>
+     <End EntitySet="BkAcctContrSet" Role="ToRole_BkCustomer_BkAcctContrs"/>
+    </AssociationSet>
+   </EntityContainer>
+   <atom:link rel="self" href="https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/SAP/BKCUSTOVW_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+   <atom:link rel="latest-version" href="https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/SAP/BKCUSTOVW_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+  </Schema>
+ </edmx:DataServices>
+</edmx:Edmx>

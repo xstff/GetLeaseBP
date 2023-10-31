@@ -1,0 +1,27 @@
+[{
+    "UUID" : "8CDCD4B1-A21C-1ED5-B2A0-5409B0915B6C",
+    "InternalID" : "WINTER",
+    "BkCustUUID" : "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55",
+    "BkCustBusiSysID" : "F6D_100",
+    "FormattedName" : "Sebastian Winter",
+    "DefaultPhoneFormattedNumber" : "",
+    "DefaultEmailURI" : "seb.winter@euro.de"
+},
+{
+    "UUID" : "8CDCD4B1-A21C-1ED5-B2A0-5409B0915B6C",
+    "InternalID" : "WINTER",
+    "BkCustUUID" : "0050568F-0843-1ED1-9D9E-CAC1D3F3C68D",
+    "BkCustBusiSysID" : "F6D_100",
+    "FormattedName" : "Sebastian Winter",
+    "DefaultPhoneFormattedNumber" : "",
+    "DefaultEmailURI" : "seb.winter@euro.de"
+},
+{
+    "UUID" : "8CDCD4B1-A21C-1ED5-B2A0-5409B0915B6C",
+    "InternalID" : "WINTER",
+    "BkCustUUID" : "8CDCD4B1-A21C-1ED5-B1CF-6E3B58C15858",
+    "BkCustBusiSysID" : "F6D_100",
+    "FormattedName" : "Sebastian Winter",
+    "DefaultPhoneFormattedNumber" : "",
+    "DefaultEmailURI" : "seb.winter@euro.de"
+}]

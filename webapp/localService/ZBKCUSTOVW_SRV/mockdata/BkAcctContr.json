@@ -1,0 +1,350 @@
+[{
+        "AcctBalAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "500.00",
+          "CurrencyCode" : "EUR"
+        },
+        "LimitAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "1000.00",
+          "CurrencyCode" : "EUR"
+        },
+        "BkAcctIdfgElmnts" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.BkAcctIdfgElmnts"
+          },
+          "ID" : "0010001223",
+          "StandardID" : "DE93900000010010001223",
+          "CurrencyCode" : "",
+          "BkStandardID" : "",
+          "BkRoutingID" : "90000001",
+          "BkCountryCode" : "DE",
+          "IntID" : "66E899029A0C1ED5B1D08CDCD4B1A21C"
+        },
+        "BusinessSystemID" : "F6D_100",
+        "ID" : "DE93900000010010001223",
+        "IDSchemeID" : "BAC.001",
+        "IDSchemeAgencyID" : "310",
+        "BkCustUUID" : "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55",
+        "BkCustBusiSysID" : "F6D_100",
+        "TypeCode" : "874",
+        "TypeName" : "Girokontovertrag",
+        "ProductionControlID" : "GIRO MAX",
+        "ProductionControlDescription" : "Girokonto m. max. Funktionalität",
+        "BankSalesProductID" : "",
+        "StatusCode" : "1",
+        "StatusName" : "Active",
+        "NavSemanticObj" : "BankAccountContract",
+        "NavAction" : "displayMoreDetails"
+      },
+      {
+         
+        "AcctBalAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "1.00",
+          "CurrencyCode" : "EUR"
+        },
+        "LimitAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "0.00",
+          "CurrencyCode" : ""
+        },
+        "BkAcctIdfgElmnts" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.BkAcctIdfgElmnts"
+          },
+          "ID" : "0010006388",
+          "StandardID" : "DE86900000110010006388",
+          "CurrencyCode" : "",
+          "BkStandardID" : "",
+          "BkRoutingID" : "90000011",
+          "BkCountryCode" : "DE",
+          "IntID" : "CDBD691557C01EE5BDFF8CDCD4B1A21C"
+        },
+        "BusinessSystemID" : "F6D_100",
+        "ID" : "DE86900000110010006388",
+        "IDSchemeID" : "BAC.001",
+        "IDSchemeAgencyID" : "310",
+        "BkCustUUID" : "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55",
+        "BkCustBusiSysID" : "F6D_100",
+        "TypeCode" : "875",
+        "TypeName" : "Einlagekontovertrag",
+        "ProductionControlID" : "FTD EWTD",
+        "ProductionControlDescription" : "Festgeld m. Ausstattung 'Vorzeitige Verfügung'",
+        "BankSalesProductID" : "",
+        "StatusCode" : "1",
+        "StatusName" : "Active",
+        "NavSemanticObj" : "TimeDeposit",
+        "NavAction" : "display"
+      },
+      {
+        "AcctBalAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "500.00",
+          "CurrencyCode" : "EUR"
+        },
+        "LimitAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "1000.00",
+          "CurrencyCode" : "EUR"
+        },
+        "BkAcctIdfgElmnts" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.BkAcctIdfgElmnts"
+          },
+          "ID" : "0010001223",
+          "StandardID" : "DE93900000010010001223",
+          "CurrencyCode" : "",
+          "BkStandardID" : "",
+          "BkRoutingID" : "90000001",
+          "BkCountryCode" : "DE",
+          "IntID" : "66E899029A0C1ED5B1D08CDCD4B1A21C"
+        },
+        "BusinessSystemID" : "F6D_100",
+        "ID" : "DE93900000010010001223",
+        "IDSchemeID" : "BAC.001",
+        "IDSchemeAgencyID" : "310",
+        "BkCustUUID" : "0050568F-0843-1ED1-9D9E-CAC1D3F3C68D",
+        "BkCustBusiSysID" : "F6D_100",
+        "TypeCode" : "874",
+        "TypeName" : "Girokontovertrag",
+        "ProductionControlID" : "GIRO MAX",
+        "ProductionControlDescription" : "Girokonto m. max. Funktionalität",
+        "BankSalesProductID" : "",
+        "StatusCode" : "1",
+        "StatusName" : "Active",
+        "NavSemanticObj" : "BankAccountContract",
+        "NavAction" : "displayMoreDetails"
+      },
+      {
+         
+        "AcctBalAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "1.00",
+          "CurrencyCode" : "EUR"
+        },
+        "LimitAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "0.00",
+          "CurrencyCode" : ""
+        },
+        "BkAcctIdfgElmnts" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.BkAcctIdfgElmnts"
+          },
+          "ID" : "0010006388",
+          "StandardID" : "DE86900000110010006388",
+          "CurrencyCode" : "",
+          "BkStandardID" : "",
+          "BkRoutingID" : "90000011",
+          "BkCountryCode" : "DE",
+          "IntID" : "CDBD691557C01EE5BDFF8CDCD4B1A21C"
+        },
+        "BusinessSystemID" : "F6D_100",
+        "ID" : "DE86900000110010006388",
+        "IDSchemeID" : "BAC.001",
+        "IDSchemeAgencyID" : "310",
+        "BkCustUUID" : "0050568F-0843-1ED1-9D9E-CAC1D3F3C68D",
+        "BkCustBusiSysID" : "F6D_100",
+        "TypeCode" : "875",
+        "TypeName" : "Einlagekontovertrag",
+        "ProductionControlID" : "FTD EWTD",
+        "ProductionControlDescription" : "Festgeld m. Ausstattung 'Vorzeitige Verfügung'",
+        "BankSalesProductID" : "",
+        "StatusCode" : "1",
+        "StatusName" : "Active",
+        "NavSemanticObj" : "TimeDeposit",
+        "NavAction" : "display"
+      },
+       {
+         
+        "AcctBalAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "1.00",
+          "CurrencyCode" : "EUR"
+        },
+        "LimitAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "0.00",
+          "CurrencyCode" : ""
+        },
+        "BkAcctIdfgElmnts" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.BkAcctIdfgElmnts"
+          },
+          "ID" : "0010006389",
+          "StandardID" : "DE86900000110010006389",
+          "CurrencyCode" : "",
+          "BkStandardID" : "",
+          "BkRoutingID" : "90000011",
+          "BkCountryCode" : "DE",
+          "IntID" : "CDBD691557C01EE5BDFF8CDCD4B1A21C"
+        },
+        "BusinessSystemID" : "F6D_100",
+        "ID" : "DE86900000110010006389",
+        "IDSchemeID" : "BAC.001",
+        "IDSchemeAgencyID" : "310",
+        "BkCustUUID" : "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55",
+        "BkCustBusiSysID" : "F6D_100",
+        "TypeCode" : "875",
+        "TypeName" : "Einlagekontovertrag",
+        "ProductionControlID" : "FTD EWTD",
+        "ProductionControlDescription" : "Festgeld m. Ausstattung 'Vorzeitige Verfügung'",
+        "BankSalesProductID" : "",
+        "StatusCode" : "3",
+        "StatusName" : "Closed",
+        "NavSemanticObj" : "TimeDeposit",
+        "NavAction" : "display"
+      },
+      {
+        "AcctBalAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "500.00",
+          "CurrencyCode" : "EUR"
+        },
+        "LimitAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "1000.00",
+          "CurrencyCode" : "EUR"
+        },
+        "BkAcctIdfgElmnts" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.BkAcctIdfgElmnts"
+          },
+          "ID" : "0010001223",
+          "StandardID" : "DE93900000010010001223",
+          "CurrencyCode" : "",
+          "BkStandardID" : "",
+          "BkRoutingID" : "90000001",
+          "BkCountryCode" : "DE",
+          "IntID" : "66E899029A0C1ED5B1D08CDCD4B1A21C"
+        },
+        "BusinessSystemID" : "F6D_100",
+        "ID" : "DE93900000010010001223",
+        "IDSchemeID" : "BAC.001",
+        "IDSchemeAgencyID" : "310",
+        "BkCustUUID" : "8CDCD4B1-A21C-1ED5-B1CF-6E3B58C15858",
+        "BkCustBusiSysID" : "F6D_100",
+        "TypeCode" : "874",
+        "TypeName" : "Girokontovertrag",
+        "ProductionControlID" : "GIRO MAX",
+        "ProductionControlDescription" : "Girokonto m. max. Funktionalität",
+        "BankSalesProductID" : "",
+        "StatusCode" : "1",
+        "StatusName" : "Active",
+        "NavSemanticObj" : "BankAccountContract",
+        "NavAction" : "displayMoreDetails"
+      },
+      {
+         
+        "AcctBalAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "1.00",
+          "CurrencyCode" : "EUR"
+        },
+        "LimitAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "0.00",
+          "CurrencyCode" : ""
+        },
+        "BkAcctIdfgElmnts" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.BkAcctIdfgElmnts"
+          },
+          "ID" : "0010006388",
+          "StandardID" : "DE86900000110010006388",
+          "CurrencyCode" : "",
+          "BkStandardID" : "",
+          "BkRoutingID" : "90000011",
+          "BkCountryCode" : "DE",
+          "IntID" : "CDBD691557C01EE5BDFF8CDCD4B1A21C"
+        },
+        "BusinessSystemID" : "F6D_100",
+        "ID" : "DE86900000110010006388",
+        "IDSchemeID" : "BAC.001",
+        "IDSchemeAgencyID" : "310",
+        "BkCustUUID" : "8CDCD4B1-A21C-1ED5-B1CF-6E3B58C15858",
+        "BkCustBusiSysID" : "F6D_100",
+        "TypeCode" : "875",
+        "TypeName" : "Einlagekontovertrag",
+        "ProductionControlID" : "FTD EWTD",
+        "ProductionControlDescription" : "Festgeld m. Ausstattung 'Vorzeitige Verfügung'",
+        "BankSalesProductID" : "",
+        "StatusCode" : "1",
+        "StatusName" : "Active",
+        "NavSemanticObj" : "TimeDeposit",
+        "NavAction" : "display"
+      },
+      {
+         
+        "AcctBalAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "100.00",
+          "CurrencyCode" : "EUR"
+        },
+        "LimitAmount" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.Amount"
+          },
+          "Content" : "0.00",
+          "CurrencyCode" : ""
+        },
+        "BkAcctIdfgElmnts" : {
+          "__metadata" : {
+            "type" : "BKCUSTOVW_SRV.BkAcctIdfgElmnts"
+          },
+          "ID" : "0010013638",
+          "StandardID" : "DE15904199110010013638",
+          "CurrencyCode" : "",
+          "BkStandardID" : "",
+          "BkRoutingID" : "90419911",
+          "BkCountryCode" : "DE",
+          "IntID" : "CDED0F5F512B1ED69C878CDCD4B1A21C"
+        },
+        "BusinessSystemID" : "F6D_100",
+        "ID" : "DE15904199110010013638",
+        "IDSchemeID" : "BAC.001",
+        "IDSchemeAgencyID" : "310",
+        "BkCustUUID" : "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55",
+        "BkCustBusiSysID" : "F6D_100",
+        "TypeCode" : "875",
+        "TypeName" : "Einlagekontovertrag",
+        "ProductionControlID" : "S-BOOK AT1",
+        "ProductionControlDescription" : "Sparkonto mit Sparbuch",
+        "BankSalesProductID" : "",
+        "StatusCode" : "1",
+        "StatusName" : "Active",
+        "NavSemanticObj" : "SavingsAccount",
+        "NavAction" : "manage"
+      }      
+]

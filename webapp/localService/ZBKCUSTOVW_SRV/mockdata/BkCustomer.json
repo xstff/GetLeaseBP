@@ -1,0 +1,298 @@
+[{
+   
+    "Person" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Person"
+      },
+      "FamilyName" : "Zeitler",
+      "GivenName" : "Anja",
+      "MiddleName" : "ZweiterVorname",
+      "BirthDate" : "\/Date(326332800000)\/",
+      "BirthPlaceName" : "",
+      "BirthName" : "Geburtsname",
+      "GenderCode" : "2",
+      "GenderName" : "Female"
+    },
+    "Organisation" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Organisation"
+      },
+      "FirstLineName" : "",
+      "SecondLineName" : "",
+      "ThirdLineName" : "",
+      "FourthLineName" : ""
+    },
+    "Group" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Group"
+      },
+      "Name" : "",
+      "AddlName" : ""
+    },
+    "UUID" : "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55",
+    "BusinessSystemID" : "F6D_100",
+    "InternalID" : "ANJAZ",
+    "CategoryCode" : "1",
+    "CategoryName" : "Person",
+    "FormattedName" : "Anja Zeitler Gräfin da van",
+    "DefaultEmailURI" : "anjaz_addrindep@hollywood.com",
+    "DefaultEmailNote" : "Nur für ernsthafte Bewerbungen!!!",
+    "FormattedLandlineNumber" : "+49 (6122) 22222-123",
+    "LandlineNote" : "Nicht vor 7.00 Uhr morgens!",
+    "FormattedCellPhoneNumber" : "+49 (172) 11111",
+    "CellPhoneNote" : "",
+    "DefaultPhoneFormattedNumber" : "+49 (6133) 33331",
+    "DefaultPhoneNote" : "Default phone note. Grüße von RS",
+    "DefaultCreditiRatingCode" : "1A",
+    "DefaultCreditRatingName" : "Very Good",
+    "RelationshipStartDate" : "\/Date(946684800000)\/",
+    "BkAcctContrs" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55',BusinessSystemID='F6D_100')/BkAcctContrs"
+      }
+    },
+    "AdvsrPty" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55',BusinessSystemID='F6D_100')/AdvsrPty"
+      }
+    },
+    "Addresses" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55',BusinessSystemID='F6D_100')/Addresses"
+      }
+    }
+  },
+  {
+    "Person" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Person"
+      },
+      "FamilyName" : "Min",
+      "GivenName" : "Mina"
+    },
+    "UUID" : "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F66",
+    "BusinessSystemID" : "F6D_100",
+    "InternalID" : "MINAMIN",
+    "CategoryCode" : "1",
+    "CategoryName" : "Person",
+    "FormattedName" : "Mina Min"
+  },
+  {
+    "Person" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Person"
+      },
+      "FamilyName" : "",
+      "GivenName" : "",
+      "MiddleName" : "",
+      "BirthDate" : null,
+      "BirthPlaceName" : "",
+      "BirthName" : "",
+      "GenderCode" : "",
+      "GenderName" : ""
+    },
+    "Organisation" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Organisation"
+      },
+      "FirstLineName" : "",
+      "SecondLineName" : "",
+      "ThirdLineName" : "",
+      "FourthLineName" : ""
+    },
+    "Group" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Group"
+      },
+      "Name" : "Schmidt-Meyer",
+      "AddlName" : "Meyer-Schmidt"
+    },
+    "UUID" : "8CDCD4B1-A21C-1ED5-B1CF-6E3B58C15858",
+    "BusinessSystemID" : "F6D_100",
+    "InternalID" : "12020",
+    "CategoryCode" : "3",
+    "CategoryName" : "Gruppe",
+    "FormattedName" : "Schmidt-Meyer Meyer-Schmidt",
+    "DefaultEmailURI" : "a@b.com",
+    "DefaultEmailNote" : "",
+    "FormattedLandlineNumber" : "0190-888",
+    "LandlineNote" : "",
+    "FormattedCellPhoneNumber" : "0190-999",
+    "CellPhoneNote" : "",
+    "DefaultPhoneFormattedNumber" : "0190-000",
+    "DefaultPhoneNote" : "",
+    "DefaultCreditiRatingCode" : "2A",
+    "DefaultCreditRatingName" : "Poor",
+    "RelationshipStartDate" : "\/Date(1460073600000)\/",
+    "BkAcctContrs" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'8CDCD4B1-A21C-1ED5-B1CF-6E3B58C15858',BusinessSystemID='F6D_100')/BkAcctContrs"
+      }
+    },
+    "AdvsrPty" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'8CDCD4B1-A21C-1ED5-B1CF-6E3B58C15858',BusinessSystemID='F6D_100')/AdvsrPty"
+      }
+    },
+    "Addresses" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'8CDCD4B1-A21C-1ED5-B1CF-6E3B58C15858',BusinessSystemID='F6D_100')/Addresses"
+      }
+    }
+},
+{
+    "Person" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Person"
+      },
+      "FamilyName" : "",
+      "GivenName" : "",
+      "MiddleName" : "",
+      "BirthDate" : null,
+      "BirthPlaceName" : "",
+      "BirthName" : "",
+      "GenderCode" : "",
+      "GenderName" : ""
+    },
+    "Organisation" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Organisation"
+      },
+      "FirstLineName" : "ATOS",
+      "SecondLineName" : "ATOS2",
+      "ThirdLineName" : "ATOS3",
+      "FourthLineName" : "ATOS4"
+    },
+    "Group" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Group"
+      },
+      "Name" : "",
+      "AddlName" : ""
+    },
+    "UUID" : "0050568F-0843-1ED1-9D9E-CAC1D3F3C68D",
+    "BusinessSystemID" : "F6D_100",
+    "InternalID" : "ATOS",
+    "CategoryCode" : "2",
+    "CategoryName" : "Organisation",
+    "FormattedName" : "ATOS ATOS2",
+    "DefaultEmailURI" : "info@atos.de",
+    "DefaultEmailNote" : "Info Email",
+    "FormattedLandlineNumber" : "+49 (6221 1234567) 0-987",
+    "LandlineNote" : "Info Landline",
+    "FormattedCellPhoneNumber" : "+49 (171) 3325200",
+    "CellPhoneNote" : "1. Handy",
+    "DefaultPhoneFormattedNumber" : "+49 (6227) 852145",
+    "DefaultPhoneNote" : "Info Phone Number",
+    "DefaultCreditiRatingCode" : "1A",
+    "DefaultCreditRatingName" : "Very Good",
+    "RelationshipStartDate" : "\/Date(1460073600000)\/",
+    "BkAcctContrs" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'0050568F-0843-1ED1-9D9E-CAC1D3F3C68D',BusinessSystemID='F6D_100')/BkAcctContrs"
+      }
+    },
+    "AdvsrPty" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'0050568F-0843-1ED1-9D9E-CAC1D3F3C68D',BusinessSystemID='F6D_100')/AdvsrPty"
+      }
+    },
+    "Addresses" : {
+      "__deferred" : {
+        "uri" : "https://ldcif6u.wdf.sap.corp:44304/sap/opu/odata/sap/BKCUSTOVW_SRV/BkCustomerSet(UUID=guid'0050568F-0843-1ED1-9D9E-CAC1D3F3C68D',BusinessSystemID='F6D_100')/Addresses"
+      }
+    }
+  },
+  {
+    "Person" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Person"
+      },
+      "FamilyName" : "",
+      "GivenName" : "",
+      "MiddleName" : "",
+      "BirthDate" : null,
+      "BirthPlaceName" : "",
+      "BirthName" : "",
+      "GenderCode" : "",
+      "GenderName" : ""
+    },
+    "Organisation" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Organisation"
+      },
+      "FirstLineName" : "ATOS"
+    },
+    "Group" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Group"
+      },
+      "Name" : "",
+      "AddlName" : ""
+    },
+    "UUID" : "0050568F-0843-1ED1-9D9E-CAC1D3F3C688",
+    "BusinessSystemID" : "F6D_100",
+    "InternalID" : "ATOSMIN",
+    "CategoryCode" : "2",
+    "CategoryName" : "Organisation",
+    "FormattedName" : "ATOS MIN",
+    "DefaultEmailURI" : "",
+    "DefaultEmailNote" : "",
+    "FormattedLandlineNumber" : "",
+    "LandlineNote" : "",
+    "FormattedCellPhoneNumber" : "",
+    "CellPhoneNote" : "",
+    "DefaultPhoneFormattedNumber" : "",
+    "DefaultPhoneNote" : "",
+    "DefaultCreditiRatingCode" : "",
+    "DefaultCreditRatingName" : "",
+    "RelationshipStartDate" : ""
+  },
+  {
+    "Person" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Person"
+      },
+      "FamilyName" : "",
+      "GivenName" : "",
+      "MiddleName" : "",
+      "BirthDate" : null,
+      "BirthPlaceName" : "",
+      "BirthName" : "",
+      "GenderCode" : "",
+      "GenderName" : ""
+    },
+    "Organisation" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Organisation"
+      },
+      "FirstLineName" : "",
+      "SecondLineName" : "",
+      "ThirdLineName" : "",
+      "FourthLineName" : ""
+    },
+    "Group" : {
+      "__metadata" : {
+        "type" : "BKCUSTOVW_SRV.Group"
+      },
+      "Name" : "Schmidt-Meyer"
+    },
+    "UUID" : "777CD4B1-A21C-1ED5-A7D1-8B305EA24F66",
+    "BusinessSystemID" : "F6D_100",
+    "InternalID" : "GROUPMIN",
+    "CategoryCode" : "3",
+    "CategoryName" : "Gruppe",
+    "FormattedName" : "Schmidt-Meyer",
+    "DefaultEmailURI" : "",
+    "DefaultEmailNote" : "",
+    "FormattedLandlineNumber" : "",
+    "LandlineNote" : "",
+    "FormattedCellPhoneNumber" : "",
+    "CellPhoneNote" : "",
+    "DefaultPhoneFormattedNumber" : "",
+    "DefaultPhoneNote" : "",
+    "DefaultCreditiRatingCode" : "",
+    "DefaultCreditRatingName" : "",
+    "RelationshipStartDate" : ""
+}
+]

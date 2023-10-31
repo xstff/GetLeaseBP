@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+ <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+  <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+ </edmx:Reference>
+ <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+  <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+ </edmx:Reference>
+ <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+  <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+ </edmx:Reference>
+ <edmx:Reference Uri="/sap/opu/odata/SAP/FS_C_BPS_ACCT_HLDR_SEARCH_SRV/$metadata">
+  <edmx:Include Namespace="FS_C_BPS_ACCT_HLDR_SEARCH_SRV" Alias="SAP"/>
+ </edmx:Reference>
+ <edmx:DataServices>
+  <Schema Namespace="fs_c_bps_account_holder_anno_mdl.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/AuthorizationGroup">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/BusinessPurposeCompleted">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/BusinessSystemID">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/CentralBlock">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/FormattedAddress">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/FormattedName">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/GroupFeature">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/NotReleased">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/PartnerRoleType">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType/UUID">
+    <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+   </Annotations>
+   <Annotations Target="FS_C_BPS_ACCT_HLDR_SEARCH_SRV.Fs_C_Bps_Account_Holder_SearchType">
+    <Annotation Term="UI.FieldGroup" Qualifier="FieldGroupAddress">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="PostalCode"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="CityName"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="StreetName"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="HouseID"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="POBoxID"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="POBoxPostalCode"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="POBoxDeviatingCity"/>
+        </Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Label" String="Address"/>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.FieldGroup" Qualifier="FieldGroupBankCustomer">
+     <Record>
+      <PropertyValue Property="Data">
+       <Collection>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Label" String="Bank Customer ID"/>
+         <PropertyValue Property="Value" Path="InternalID"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="FamilyName"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="GivenName"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="BirthDate"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="FirstLineName"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="SecondLineName"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="Name"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="AddlName"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="KeyWordsText"/>
+        </Record>
+        <Record Type="UI.DataField">
+         <PropertyValue Property="Value" Path="AdditionalKeyWordsText"/>
+        </Record>
+       </Collection>
+      </PropertyValue>
+      <PropertyValue Property="Label" String="Bank Customer"/>
+     </Record>
+    </Annotation>
+    <Annotation Term="UI.LineItem">
+     <Collection/>
+    </Annotation>
+   </Annotations>
+  </Schema>
+ </edmx:DataServices>
+</edmx:Edmx>

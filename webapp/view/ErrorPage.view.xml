@@ -1,0 +1,10 @@
+<!-- This message page is displayed in navigation container for message pages of the MainPage View in case tehre is an technical error  -->
+<mvc:View controllerName="fs.cb.bankcustomer.displays1.controller.NotFound" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<!-- TODO: Icon to be replaced or removed  -->
+	<MessagePage description="" icon="{sap-icon://product}" id="errorPage" showHeader="false" text="{path: 'message>/', formatter: '.getErrorPageText'}"
+		title="{i18n>errroPageTitle}">
+		<customDescription>
+			<Link id="link" press="onLinkPressed" text="{i18n>backToStartPage}"/>
+		</customDescription>
+	</MessagePage>
+</mvc:View>

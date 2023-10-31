@@ -1,0 +1,111 @@
+[{
+	"InternalID": "ANJAZ",
+	"GroupAddlName": "",
+	"KeyWordsText": "",
+	"AdditionalKeyWordsText": "",
+	"FormattedName": "Anja Zeitler Gräfin da van",
+	"FormattedAddress": "Teststreet 7 / E-77777 Testcity",
+	"UUID": "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F55",
+	"AuthorizationGroup": "",
+	"BusinessSystemID": "F6D_100",
+	"PersonFamilyName": "Zeitler",
+	"PersonGivenName": "Anja",
+	"PersonBirthDate": "\/Date(326332800000)\/",
+	"OrganisationFirstLineName": "",
+	"OrganisationSecondLineName": "",
+	"GroupName": "",
+	"to_BusinessPartnerValueHelp": {
+		"__deferred": {
+			"uri": "https://ldcif6d.wdf.sap.corp:44300/sap/opu/odata/SAP/BUSINESSPARTNERSEARCH_SRV/Fs_C_Bps_Accthldr_Search_V1('ANJAZ')/to_BusinessPartnerValueHelp"
+		}
+	}
+}, {
+	"InternalID": "12020",
+	"GroupAddlName": "Meyer-Schmidt",
+	"KeyWordsText": "",
+	"AdditionalKeyWordsText": "",
+	"FormattedName": "Schmidt-Meyer Meyer-Schmidt",
+	"FormattedAddress": "",
+	"UUID": "8CDCD4B1-A21C-1ED5-B1CF-6E3B58C15858",
+	"AuthorizationGroup": "",
+	"BusinessSystemID": "F6D_100",
+	"PersonFamilyName": "",
+	"PersonGivenName": "",
+	"PersonBirthDate": null,
+	"OrganisationFirstLineName": "",
+	"SecondLineName": "",
+	"GroupName": "Schmidt-Meyer",
+	"to_BusinessPartnerValueHelp": {
+		"__deferred": {
+			"uri": "https://ldcif6d.wdf.sap.corp:44300/sap/opu/odata/SAP/BUSINESSPARTNERSEARCH_SRV/Fs_C_Bps_Accthldr_Search_V1('12020')/to_BusinessPartnerValueHelp"
+		}
+	}
+}, {
+	"InternalID": "ATOS",
+	"GroupAddlName": "",
+	"KeyWordsText": "",
+	"AdditionalKeyWordsText": "",
+	"FormattedName": "ATOS ATOS2",
+	"FormattedAddress": "Botoxstraße 1 / D-69190 Walldorf",
+	"UUID": "0050568F-0843-1ED1-9D9E-CAC1D3F3C68D",
+	"AuthorizationGroup": "",
+	"BusinessSystemID": "F6D_100",
+	"PersonFamilyName": "",
+	"PersonGivenName": "",
+	"PersonBirthDate": null,
+	"OrganisationFirstLineName": "ATOS",
+	"SecondLineName": "ATOS2",
+	"Name": "",
+	"to_BusinessPartnerValueHelp": {
+		"__deferred": {
+			"uri": "https://ldcif6d.wdf.sap.corp:44300/sap/opu/odata/SAP/BUSINESSPARTNERSEARCH_SRV/Fs_C_Bps_Accthldr_Search_V1('ATOS')/to_BusinessPartnerValueHelp"
+		}
+	}
+}, {
+	"UUID": "8CDCD4B1-A21C-1ED5-A7D1-8B305EA24F66",
+	"BusinessSystemID": "F6D_100",
+	"InternalID": "MINAMIN",
+	"CategoryCode": "1",
+	"CategoryName": "Person",
+	"FormattedName": "Mina Min",
+	"FormattedAddress": "",
+	"AuthorizationGroup": "",
+	"PersonFamilyName": "",
+	"PersonGivenName": "",
+	"PersonBirthDate": null,
+	"OrganisationFirstLineName": "",
+	"SecondLineName": "",
+	"GroupName": ""
+},
+{
+	"UUID": "0050568F-0843-1ED1-9D9E-CAC1D3F3C688",
+	"BusinessSystemID": "F6D_100",
+	"InternalID": "ATOSMIN",
+	"CategoryCode": "2",
+	"CategoryName": "Organisation",
+	"FormattedName": "Mina Min",
+	"FormattedAddress": "",
+	"AuthorizationGroup": "",
+	"PersonFamilyName": "",
+	"PersonGivenName": "",
+	"PersonBirthDate": null,
+	"OrganisationFirstLineName": "",
+	"SecondLineName": "",
+	"GroupName": ""
+},
+{
+	"UUID": "777CD4B1-A21C-1ED5-A7D1-8B305EA24F66",
+	"BusinessSystemID": "F6D_100",
+	"InternalID": "GROUPMIN",
+	"CategoryCode": "3",
+	"CategoryName": "Group",
+	"FormattedName": "Group Min",
+	"FormattedAddress": "",
+	"AuthorizationGroup": "",
+	"PersonFamilyName": "",
+	"PersonGivenName": "",
+	"PersonBirthDate": null,
+	"OrganisationFirstLineName": "",
+	"SecondLineName": "",
+	"GroupName": ""
+}]
