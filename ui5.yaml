@@ -27,19 +27,22 @@ server:
           - path: /sap
             url: https://vh-fdc02-fc1.fsic.sap.corp:44310/
             client: "100"
-            destination: "FC1CLNT100"
+            destination: FC1CLNT100
           - path: /sap/opu/odata/sap/BKCUSTOVW_SRV/
             url: https://vh-fdc02-fc1.fsic.sap.corp:44310/
             client: "100"
-            destination: "FC1CLNT100"
+            destination: FC1CLNT100
           - path: /sap/opu/odata/sap/BUSINESSPARTNERSEARCH_SRV
             url: https://vh-fdc02-fc1.fsic.sap.corp:44310
             client: "100"
-            destination: "FC1CLNT100"
+            destination: FC1CLNT100
           - path: /sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='BUSINESSPARTNERSEARCH_ANNO_MDL',Version='0001')/$value
             url: https://vh-fdc02-fc1.fsic.sap.corp:44310
             client: "100"
-            destination: "FC1CLNT100"
+            destination: FC1CLNT100
+          - path: /resources/sap/fs/cb/lib/commons1/
+            application: fscblibcommons1
+            url: https://vh-fdc02-fc1.fsic.sap.corp:44310
         ui5:
           path:
             - /resources
@@ -57,3 +60,11 @@ server:
       configuration:
         component: fs.cb.bankcustomer.displays1
         ui5Theme: sap_fiori_3
+    - name: fiori-tools-servestatic
+      afterMiddleware: compression
+      configuration:
+        paths:
+          - path: /resources/fs.cb.consumerloan.manages1
+            src: ../Leasing2/webapp
+          - path: /appconfig
+            src: appconfig

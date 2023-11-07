@@ -129,6 +129,9 @@
                 },
                 "sap.f": {
                     "lazy": true
+                },
+                "sap.fs.cb.lib.commons1":{
+                    "lazy": true
                 }
             }
         },

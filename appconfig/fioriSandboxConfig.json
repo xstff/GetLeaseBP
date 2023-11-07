@@ -1,0 +1,9 @@
+{
+  "applications": {
+    "ConsumerLoan-manage": {
+      "additionalInformation": "SAPUI5.Component=fs.cb.consumerloan.manages1",
+      "applicationType": "URL",
+      "url": "../resources/fs.cb.consumerloan.manages1"
+    }
+  }
+}
